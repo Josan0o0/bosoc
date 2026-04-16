@@ -15,11 +15,10 @@
     <meta name="msapplication-config" content="/browserconfig.xml">
     <meta name="theme-color" content="#ff0000">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Bosoc Chemical Co.,Ltd - Manufacturer of Phosphine & Arsine (PH3 & AsH3) in China">
     <meta property="og:site_name" content="Bosoc Chemical"/>
     <meta property="og:url" content="https://www.bosoc.cn/"/>
     <meta property="og:locale" content="en_US">
-    <meta name="twitter:card" content="Bosoc Chemical"/>
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@Bosoc_Chemical"/>
     <meta name="twitter:creator" content="@Bosoc_Chemical"/>
     <meta name="description" content="Leading Manufacturer of Phosphine & Arsine in China - PH3 & AsH3">
@@ -38,7 +37,7 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180">
     <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon.png" sizes="180x180">
-    <link rel="icon" type="image/png" href="imagesfavicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="images/favicon-20x20.png" sizes="20x20">
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="manifest" href="/site.webmanifest">
@@ -74,6 +73,7 @@
   <div class="slogan line1">✓ Research team of 20+ PhDs/Masters</div>
   <div class="slogan line2">✓ Leaders from 4 top domestic science and engineering universities</div>
   <div class="slogan line3">✓ Deep integration of industry, academia & research</div>
+</div>
 </div>
 </section>
 
@@ -237,31 +237,10 @@ Nanomaterials have quantum size effect, small size effect and surface effect. Af
 </script>
 
 <script>
-function openImg(src){document.getElementById("popupImg").src=src;document.getElementById("imgPopup").style.display="block";}
-function closeImg(){document.getElementById("imgPopup").style.display="none";}
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-        closeImg();
-    }
-});
-</script>
-
-<script>
 document.addEventListener('DOMContentLoaded',function(){
 const els=document.querySelectorAll('.fade-up,.fade-left,.fade-right')
 const ob=new IntersectionObserver((e)=>{e.forEach(i=>{if(i.isIntersecting)i.target.classList.add('show')})},{threshold:0.1})
 els.forEach(e=>ob.observe(e))})
-
-let currentSlide = 0;
-const slides = document.querySelectorAll('.carousel-item');
-const dots = document.querySelectorAll('.dot');
-function showSlide(){slides.forEach((s,i)=>{s.classList.remove('active');dots[i].classList.remove('active');});slides[currentSlide].classList.add('active');dots[currentSlide].classList.add('active');}
-function nextSlide(){currentSlide=(currentSlide+1)%slides.length;showSlide();}
-function prevSlide(){currentSlide=(currentSlide-1+slides.length)%slides.length;showSlide();}
-function goToSlide(n){currentSlide=n;showSlide();}
-document.querySelector('.next').addEventListener('click',nextSlide);
-document.querySelector('.prev').addEventListener('click',prevSlide);
-setInterval(nextSlide,3000); 
 </script>
 
 <div class="cs_float">
@@ -270,15 +249,6 @@ setInterval(nextSlide,3000);
   <button class="cs_btn cs_chat" onclick="toggleChat()"><img src="images/Chat.gif" alt="Chat"></button>
 </div>
 <div class="overlay" id="overlay"></div>
-
-<script>
-function switchTab(index) {
-const tabs = document.querySelectorAll('.tab');
-const contents = document.querySelectorAll('.content');
-tabs.forEach((tab,i) => { tab.classList.toggle('active',i===index); });
-contents.forEach((content,i) => { content.classList.toggle('active',i===index); });
-}
-</script>
 
 <!-- 留言表单弹窗 -->
 <div class="popup" id="formPopup">
