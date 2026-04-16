@@ -1,6 +1,6 @@
 * { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior:smooth;width: 100%;}
-body { font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif; line-height:1.7; color:#333; background:#f8f9fa;overflow-x: hidden;width: 100%;position: relative;}
+body { font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif; line-height:1.7; color:#333; background:#f8f9fa;width: 100%;position: relative;}
 img { max-width:100%; height:auto; display:block; }
 a { text-decoration:none; color:inherit; }
 h1{color:#fff;font-size:clamp(16px, 1.562cqi, 30px)}
