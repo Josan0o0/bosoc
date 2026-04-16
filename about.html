@@ -19,7 +19,7 @@
   <meta property="og:image:height" content="627">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Bosoc Chemical Co.,Ltd - Manufacturer of Phosphine & Arsine (PH3 & AsH3) in China">
-  <meta name="twitter:description" content="Leading Manufacturer of Phosphine & Arsine (PH3 & AsH3) in China">
+  <meta name="twitter:description" content="Leading Manufacturer of Phosphine & Arsine in China - PH3 & AsH3">
   <meta name="twitter:image" content="https://www.bosoc.cn/images/Bosoc.jpg">
   <meta name="robots" content="index,follow">
   <meta http-equiv="x-dns-prefetch-control" content="on">
@@ -35,6 +35,7 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="mask-icon" href="images/Bosoc.svg" color="#5bbad5">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <style>@media (min-width:1200px){body{max-width:1200px;margin:0 auto;}}</style>
 </head>
 <body>
 
@@ -259,10 +260,10 @@
 <div class="popup" id="formPopup">
   <button class="close" onclick="closeAll()">&times;</button>
   <h3>Leave Message</h3>
-  <input type="text" placeholder="Name">
-  <input type="text" placeholder="Phone Number">
-  <input type="text" placeholder="Email">
-  <textarea rows="4" placeholder="Message"></textarea>
+  <input type="text" name="name" placeholder="Name">
+  <input type="text" name="phone" placeholder="Phone Number">
+  <input type="text" name="email" placeholder="Email">
+  <textarea name="message" rows="4" placeholder="Message"></textarea>
   <button type="submit">Submit</button>
 </div>
 
@@ -278,18 +279,6 @@ document.addEventListener('DOMContentLoaded',function(){
   const els=document.querySelectorAll('.fade-up,.fade-left,.fade-right')
   const ob=new IntersectionObserver((e)=>{e.forEach(i=>{if(i.isIntersecting)i.target.classList.add('show')})},{threshold:0.1})
   els.forEach(e=>ob.observe(e))
-
-  let currentSlide = 0;
-  const slides = document.querySelectorAll('.carousel-item');
-  const dots = document.querySelectorAll('.dot');
-  function showSlide(){slides.forEach((s,i)=>{s.classList.remove('active');dots[i].classList.remove('active');});slides[currentSlide].classList.add('active');dots[currentSlide].classList.add('active');}
-  function nextSlide(){currentSlide=(currentSlide+1)%slides.length;showSlide();}
-  function prevSlide(){currentSlide=(currentSlide-1+slides.length)%slides.length;showSlide();}
-  if(slides.length > 0){
-    document.querySelector('.next').addEventListener('click',nextSlide);
-    document.querySelector('.prev').addEventListener('click',prevSlide);
-    setInterval(nextSlide,3000);
-  }
 });
 
 function openImg(src){document.getElementById("popupImg").src=src;document.getElementById("imgPopup").style.display="block";}
