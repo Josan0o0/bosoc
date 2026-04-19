@@ -175,14 +175,13 @@
       <div class="footer-col">
         <img width="120" height="auto" src="images/Bosoc.svg" alt="Bosoc Chemical"><br>
         <p>Professional Manufacturer of<br>Phosphine & Arsine (PH<sub>3</sub> & AsH<sub>3</sub>) in China</p>
-      </div>
-      <div class="footer-col">
+      </div>      <div class="footer-col"><ul>
         <b>Site Map : </b>
         <li><a href="index.html">Home</a></li> |
         <li><a href="about.html">About Us</a></li> |
         <li><a href="products.html">Products</a></li> |
         <li><a href="rd.html">R & D</a></li> |
-        <li><a href="contact.html">Contact Us</a></li><br><br>
+        <li><a href="contact.html">Contact Us</a></li></ul><br>
         <div class="SocialMedia">
           <b>Follow Us : &nbsp;&nbsp;</b>
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
@@ -222,29 +221,75 @@
 </div>
 
 <script>
-document.addEventListener('DOMContentLoaded',function(){
-  const els = document.querySelectorAll('.fade-up,.fade-left,.fade-right');
-  const ob = new IntersectionObserver((e)=>{e.forEach(i=>{if(i.isIntersecting)i.target.classList.add('show')})},{threshold:0.1});
-  els.forEach(e=>ob.observe(e));
+document.addEventListener('DOMContentLoaded', function() {
+  // 滚动动画
+  const els = document.querySelectorAll('.fade-up, .fade-left, .fade-right');
+  const ob = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.1 });
+  
+  els.forEach(el => ob.observe(el));
 
+  // 轮播图
   let currentSlide = 0;
   const slides = document.querySelectorAll('.carousel-item');
   const dots = document.querySelectorAll('.dot');
-  function showSlide(){slides.forEach((s,i)=>{s.classList.remove('active');dots[i].classList.remove('active');});slides[currentSlide].classList.add('active');dots[currentSlide].classList.add('active');}
-  function nextSlide(){currentSlide=(currentSlide+1)%slides.length;showSlide();}
-  function prevSlide(){currentSlide=(currentSlide-1+slides.length)%slides.length;showSlide();}
-  function goToSlide(n){currentSlide=n;showSlide();}
-  document.querySelector('.next').addEventListener('click',nextSlide);
-  document.querySelector('.prev').addEventListener('click',prevSlide);
-  setInterval(nextSlide,3000);
+
+  function showSlide() {
+    slides.forEach((s, i) => {
+      s.classList.remove('active');
+      dots[i].classList.remove('active');
+    });
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide();
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide();
+  }
+
+  function goToSlide(n) {
+    currentSlide = n;
+    showSlide();
+  }
+
+  document.querySelector('.next').addEventListener('click', nextSlide);
+  document.querySelector('.prev').addEventListener('click', prevSlide);
+  setInterval(nextSlide, 3000);
 });
 
-function toggleForm(){document.getElementById("formPopup").style.display="block";document.getElementById("overlay").style.display="block";}
-function toggleChat(){document.getElementById("chatPopup").style.display="block";document.getElementById("overlay").style.display="block";}
-function openWA(){window.open("https://wa.me/8613316563686","_blank");}
-function closeAll(){document.getElementById("formPopup").style.display="none";document.getElementById("chatPopup").style.display="none";document.getElementById("overlay").style.display="none";}
+// 弹出层
+function toggleForm() {
+  document.getElementById("formPopup").style.display = "block";
+  document.getElementById("overlay").style.display = "block";
+}
+function toggleChat() {
+  document.getElementById("chatPopup").style.display = "block";
+  document.getElementById("overlay").style.display = "block";
+}
+function openWA() {
+  window.open("https://wa.me/8613316563686", "_blank");
+}
+function closeAll() {
+  document.getElementById("formPopup").style.display = "none";
+  document.getElementById("chatPopup").style.display = "none";
+  document.getElementById("overlay").style.display = "none";
+}
 
-document.addEventListener('keydown',function(e){if(e.key==='Escape')closeAll();});
+// ESC关闭
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeAll();
+});
 </script>
 </body>
 </html>
