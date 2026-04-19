@@ -1,6 +1,6 @@
 /* @media: 480, 768, 992, 1200, 1900 */
 * { margin:0; padding:0; box-sizing:border-box; }
-html { width:100%; min-width:1000px; scroll-behavior:smooth; overflow-x:hidden; max-width:100vw;}
+html { width:100%; min-width:1000px; scroll-behavior:smooth; max-width:100vw;}
 body {
   width:1200px !important;       /* 强制基准 1200px */
   max-width:1900px !important;    /* 强制上限 1900px */
