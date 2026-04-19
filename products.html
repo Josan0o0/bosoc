@@ -57,9 +57,9 @@
   </div>
 </header>
 
-<section id="banner" style="background: url('images/IC.webp') no-repeat center center; background-size: cover;">
+<section id="banner" style="background: url('images/IC.webp') no-repeat center center; background-size: 100% 100%;">
+  <div id="particles-js"></div>
   <div class="chip-bg">
-    <div id="particles-js"></div>
     <div class="app-card-wrap">
       <div class="app-card">
         <div class="app-icon"><img src="images/LED.png" height="50" alt="LED"></div>
@@ -78,14 +78,14 @@
         <div class="app-card-text">Integrated circuit</div>
       </div>
     </div>
-    <div class="app-text">
+    <div class="app-text" style="text-align: left !important; justify-content: flex-start; align-items: flex-start;">
       <h2>Application Area</h2>
       <p>The self-developed high purity electronic gas and semiconductor precursor products have been successfully used in TSMC's 12-inch 28nm process integrated circuit, SMIC's 12 inch 28nm process integrated circuit, BOE OLED flexible display process and other advanced manufacturing fields.</p>
     </div>
   </div>
 </section>
 
-<section id="production_flow" style="display:flex;flex-wrap:wrap;gap:20px;">
+<section id="production_flow" style="display:flex;flex-wrap:wrap;gap:20px; height: auto;>
   <div style="flex:1 1 1200px;">
     <table>
       <tr>
@@ -111,18 +111,14 @@
       </tr>
     </table>
   </div>
-<div style="display: flex;">
-  <div style="flex:1; padding:5px; display:flex; justify-content:center; align-items:center;">
-    <img src="images/arsine-workshop-M.webp" style="border-radius:12px; max-width:100%;" alt="Workshop">
-  </div>
-  <div style="flex:1; padding:5px; display:flex; justify-content:center; align-items:center;">
-    <img src="images/phosphine-workshop-M.webp" style="border-radius:12px; max-width:100%;" alt="Workshop">
-  </div>
+  </section>
+<div id="factories" style="display:flex; flex-wrap:nowrap; margin:0 auto; width:100%; gap:10px; overflow:hidden;">
+  <div style="flex:1; padding:5px;"><img src="images/arsine-workshop-M.webp" style="width:100%; height:auto; border-radius:12px; display:block;" alt="Workshop"></div>
+  <div style="flex:1; padding:5px;"><img src="images/phosphine-workshop-M.webp" style="width:100%; height:auto; border-radius:12px; display:block;" alt="Workshop"></div>
 </div>
-</section>
 
 <section id="products" style="display:flex;flex-wrap:wrap;gap:20px;">
-  <div style="margin-left:auto;flex:1 1 1260px;">
+  <div style="flex:1 1 100%;max-width:100%;width:100%;">
     <div class="tabs">
       <div class="tab active" onclick="switchTab(0)">[6N5] PH₃</div>
       <div class="tab" onclick="switchTab(1)">[6N5] AsH₃</div>
@@ -131,7 +127,7 @@
       <div class="tab" onclick="switchTab(4)">[6N-PV] PH₃</div>
     </div>
 
-    <div class="content active">
+    <div class="content active"">
       <h1>[6N5] Phosphine (PH₃)</h1>
       <table class="info-table">
         <tr><td>Product Purity</td><td>99.99995%</td><td>Cylinder Size / Valve Type</td><td>47L / DISS 632M</td></tr>
@@ -298,7 +294,7 @@
   </div>
 </section>
 
-<section class="summary" id="packing_delivery">
+<section class="summary" id="packing_delivery"">
   <h2 class="section-title">Packing & Delivery</h2>
   <div class="container">
     <div class="core-info-col fade-left"><img src="images/0.44-8L_cylinder.webp" alt="Cylinder"><h4>0.44-8L Cylinder:</h4>Small cylinder packaging for pure gas:<br>✓ Positive pressure cylinders<br>✓ Adsorption cylinders (SDS safety source)<br>✓ Packaging: 0.44 / 3.2 / 8.0 liters</div>
@@ -352,7 +348,7 @@
   <div class="container">
     <div class="footer-content">
       <div class="footer-col">
-        <img width="120" height="auto" src="images/Bosoc.svg" alt="Bosoc Chemical"><br>
+        <img width="120" src="images/Bosoc.svg" alt="Bosoc Chemical"><br>
         <p>Professional Manufacturer of<br>Phosphine & Arsine (PH<sub>3</sub> & AsH<sub>3</sub>) in China</p>
       </div>
       <div class="footer-col">
